@@ -1,0 +1,51 @@
+<table>
+  <thead>
+    <tr>
+      <th>
+        tipo de document
+      </th>
+      <th>
+        Documento
+      </th>
+      <th>
+        Nombre
+      </th>
+      <th>
+        Apellido
+      </th>
+      <th>
+        Correo electrónico
+      </th>
+      <th>
+
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="x in table">
+      <td>
+        {{ x['td_name_type_document'] }}
+      </td>
+      <td>
+        {{ x['e_document'] }}
+      </td>
+      <td>
+        {{ x['e_name'] }}
+      </td>
+      <td>
+        {{ x['e_lastname'] }}
+      </td>
+      <td>
+        {{ x['e_email'] }}
+      </td>
+      <td>
+        <a href="">
+          ver detalle
+        </a>
+        <a employee="{{ x['id_employee'] }}" ng-click="deleteEmployee($event)">
+          Borrar
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
